@@ -15,7 +15,7 @@
 % character encoding
 \usepackage[utf8]{inputenc}                   % replace by the encoding you are using
 \usepackage{pslatex}
-
+\usepackage{textcomp}
 
 % adjust the page margins<
 \usepackage[scale=0.8]{geometry}
@@ -38,8 +38,8 @@
 %\mobile{+49-(0)176-5325-5754}                    % optional, remove the line if not wanted
 \phone{+41-(0)6168-86251}                      % optional, remove the line if not wanted
 %\fax{+49-(0)6221-42-3454}                          % optional, remove the line if not wanted
-\email{\fontsize{10}{12}\selectfont jitao\_david.zhang@roche.com}                      % optional, remove the line if not wanted
-\extrainfo{\url{http://www.NextBioMotif.com}} % optional, remove the line if not wanted
+\email{jitao\_david.zhang@roche.com}              
+% \extrainfo{\url{http://www.NextBioMotif.com}} % optional, remove the line if not wanted
 \photo[85pt]{CVfoto0}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
 % \quote{Some quote (optional)}                 % optional, remove the line if not wanted
 
@@ -50,7 +50,8 @@
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
-\renewcommand{\firstnamefont}{\fontsize{30}{32}\sffamily\mdseries\upshape}
+\renewcommand*{\namefont}{\fontsize{32}{32}\sffamily\mdseries\upshape} 
+%\renewcommand{\namefont}{\fontsize{30}{32}\sffamily\mdseries\upshape}
 \maketitle
 
 %\section{Stichwort}
@@ -63,7 +64,7 @@
 \cventry{2006--2008}{Bioinformatics programming}{HUSAR Bioinformatics Group, DKFZ}{Heidelberg}{}{Bioinformatic programming in Perl, C, and C++ for web service and sequence analysis.}                % arguments 3 to 6 are optional
 
 \section{Education}
-\cventry{2008--2011}{Ph.D. study (Dr.rer.nat.)}{Division of Molecular Genome Analysis, German Cancer Research Center (DKFZ)}{Heidelberg}{}{Thesis:
+\cventry{2008--2011}{Ph.D. study (Dr.rer.nat.)}{German Cancer Research Center (DKFZ)}{Heidelberg}{}{Thesis:
   \textquotedblleft\emph{Computational and Statistical Approaches to
     Profile Cancer-related Gene Regulatory Network with Integrated
     High-throughput Data}\textquotedblright. Supervised by PD Dr. Stefan
@@ -98,10 +99,10 @@ Statistical analysis, data integration and pathway analysis to identify therapeu
 % Publications from a BibTeX file
 \nocite{*}
 \renewcommand\refname{Selected peer-reviewed publications}
-\bibliographystyle{apalike}
+\bibliographystyle{plain}
 \bibliography{mypubs-selected}       % 'publications' is the name of a BibTeX file
 
-\section{Selectedopen-source software}
+\section{Selected open-source software}
 \cventry{KEGGgraph}{R/Bioconductor}{Data mining and network analysis
   of biological pathways as graph}{}{}{}
 %\cventry{ScratchIt}{C++}{Robust analysis of wound-healing assays with high-content microscopy}{}{}{}
