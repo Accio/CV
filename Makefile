@@ -1,11 +1,11 @@
 all: en	de
 
-en: JitaoDavidZhang_CV_en.pdf
+en: JitaoDavidZhang_CV_en.tex
 	bibtex JitaoDavidZhang_CV_en
 	pdflatex JitaoDavidZhang_CV_en.tex
 	pdflatex JitaoDavidZhang_CV_en.tex
 
-de: JitaoDavidZhang_CV_de.pdf
+de: JitaoDavidZhang_CV_de.tex
 	bibtex JitaoDavidZhang_CV_de
 	pdflatex JitaoDavidZhang_CV_de.tex
 	pdflatex JitaoDavidZhang_CV_de.tex
