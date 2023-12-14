@@ -50,12 +50,17 @@
 %% Now actually use the newly defined style.
 \urlstyle{leo}
 
+% handle two biblatex files
+\usepackage[defernumbers=true, sorting=ydnt]{biblatex}
+\addbibresource{mypubs-first-last.bib}       % 'publications' is the name of a BibTeX file
+\addbibresource{mypubs-not-first-last.bib}       % 'publications' is the name of a BibTeX file
+\addbibresource{myposters.bib}       % 'publications' is the name of a BibTeX file
 
 % personal data
 \firstname{Jitao David}
 \familyname{Zhang}
 % \title{\fontsize{12}{14}\selectfont A Computational Biologist in Drug Discovery}               % optional, remove the line if not wanted
-% \address{F. Hoffmann-La Roche AG}{4070 Basel, Switzerland}    % optional, remove the line if not wanted
+\address{F. Hoffmann-La Roche AG}{4070 Basel, Switzerland}    % optional, remove the line if not wanted
 % \address{Department of Mathematics and Computer Sciences, University Basel}{4070 Basel, Switzerland}    % optional, remove the line if not wanted
 \email{jitao\_david.zhang@roche.com}
 \homepage{jdzhang.me}
@@ -77,96 +82,123 @@
 
 \cvlistitem{Computational biologist with 10+ years' industrial research experience}
 \cvlistitem{Key contributions to drug candidates in development and marketed products}
+\cvlistitem{Author of patents, open-source software, and 40+ peer-reviewed publications}
 \cvlistitem{Inventing and implementing proprietary technologies and workflows}
-\cvlistitem{Establishing a new research group on computational toxicology and safety}
-\cvlistitem{Author of patents, open-source software, and publications (\textit{h}-index 29)}
-\cvlistitem{Teaching two courses and supervising postdocs, students, and apprentices}
+\cvlistitem{Establishing a new research group for computational toxicology and safety}
+\cvlistitem{Teaching three courses and supervising postdocs, students, and apprentices}
 
-\section{Research and teaching}
+\section{Working experience}
 
-\cventry{2011--\hspace{4.25ex}}{Expert Computational Biologist}{F. Hoffmann-La
-Roche AG}{Basel, Switzerland}{}{I develop algorithms and software to mine,
-interpret, model and integrate heterogeneous data, and apply mathematical and
-computational tools to support preclinical drug discovery projects. I am
-responsible for target assessment and validation, multiscale modeling and causal
-inference of drug mechanism and safety, and MoA characterisation and de-risking
-of drug candidates. With colleagues I co-develop novel platforms and resources
-to support drug discovery, for instance
-the~\href{https://en.wikipedia.org/wiki/Molecular_phenotyping}{molecular
-phenotyping} platform, the Pathway-Annotated Chemical Ensemble (PACE) library,
-and new methods for computational toxicology and safety assessment.}
-
-\cventry{2018--\hspace{4.25ex}}{Lecturer}{Department of Mathematics and Computer Science, University of Basel}{}{}{Teaching the lecture series~\textit{Introduction to \textbf{A}pplied \textbf{M}athematics and \textbf{I}nformatics In \textbf{D}rug \textbf{D}iscovery} (\url{http://AMIDD.ch}) in autumn semesters, and~\textit{\textbf{M}athematical and \textbf{C}omputational \textbf{B}iology in \textbf{D}rug \textbf{D}iscovery} (\url{http://MCBDD.ch}) in spring semesters.}
-
-
-\section{Training, mentoring, and academic commitment}
-\cvitem{2022--\hspace{4.25ex}}{Co-organizer of Roche PMDA (Predictive Modeling and Data Analytics) Summer School for PhD students.}
-\cvitem{2021--\hspace{4.25ex}}{Certified \textit{Lehrmeister} for informatics vocational apprenticeship.}
-\cvitem{2020--\hspace{4.25ex}}{Certified Software and Data Carpentry instructor, hosting company internal carpentries.}
-\cvitem{2018--\hspace{4.25ex}}{Participation in the lecture
-series~\textit{From Novel Targets To Novel Therapeutic Modalities}, Master
-Programme Drug Sciences, University of Basel.}
-\cvitem{2016--\hspace{4.25ex}}{Supervising
-master students in bioinformatics and computational biology, and co-supervise
-PostDocs in collaboration with academic and industrial collaboration partners.}
-\cvitem{2012--\hspace{4.25ex}}{Reviewing research proposals for funding agencies
-and manuscripts for journals including \emph{Bioinformatics}, \emph{PLOS Comp.
-Biol.}, \emph{NAR Genom. and Bioinform.}, \textit{etc.}}
-\cvitem{2012--\hspace{4.25ex}}{Leading courses, seminars and
-workshops about programming, bioinformatics, and computational biology in drug
-discovery.}
+\cventry{2022--\hspace{4.25ex}}{Expert scientist}{F. Hoffmann-La
+Roche AG}{}{}{Iterative Quantitative Benefit-Risk Evaluation (IQ-BRE) with multi-modal experiments, computational biology and computational toxicology. Highlights include critical single-cell data analysis support for Selnoflast clinical Phase 1 trial, causal inference in drug discovery and development, and Kinex, a new workflow characterizing kinase-associated safety and efficacy profiles of drug candidates.}
+\cventry{2018--\hspace{4.25ex}}{Lecturer}{University Basel of Basel}{}{}{Teaching graduate- and post-graduate-level courses at Department of Mathematics and Computer Science}
+\cventry{2018-2022}{Senior principal scientist}{F. Hoffmann-La Roche AG}{}{}{Multiscale modelling of drug mechanism and safety, application of PACE (Pathway Annotated Chemical Ensemble, formerly known as SPARK) library for screening, development of machine-learning empowered toxicity screening assays. Highlights include the TeraTox assay, the identification of RepSox as a tool compound for ophthalmology, de-risking molecules in development, and informing key decisions for several projects.}
+\cventry{2016-2018}{Principal scientist}{F. Hoffmann-La Roche AG}{}{}{Developing the molecular phenotyping platform, developing the SPARK small-molecule library, and supporting safety and projects in infectious diseases. Highlight include a pilot study of molecular phentoyping for phenotypic drug discovery, identification of EGF update as an early readout for antisense nephrotoxicity, and development of the BioQC software.}
+\cventry{2013-2016}{Senior scientist}{F. Hoffmann-La Roche AG}{}{}{Developing the molecular phenotyping platform, supporting Phase IV study of Oseltamivir/Tamiflu (the IRIS study), and applying multi-omics data analysis for disease modelling. Highlights include identification of the time-dependent critical role TGF-beta signaling in breast cancer metastasis, and genomic analysis of the molecular neuropathology of tuberous sclerosis using a human stem cell model.}
+\cventry{2011-2013}{Scientist}{F. Hoffmann-La Roche AG}{}{}{Profiling compound efficacy and safety with omics methods, data mining, and machine learning. Highlights include analysis of the TG-GATEs database, identification of JAK/STAT3 pathway turning white adipose to brown, and application of network analysis for multiple projects.}
 
 \section{Education}
+
 \cventry{2008--2011}{Dr.rer.nat. Bioinformatics}{German Cancer Research Center/ Universit\"at Heidelberg}{}{}{Computational and statistical approaches to study gene networks, supervised by Dr. Stefan Wiemann}
 %I have also been working with image analysis of high-content microscopy.}
-\cventry{2007-2007}{Marie-Curie Fellow}{Huber Group, European Institute of Bioinformatics}{}{Cambridge, UK}{}
+\cventry{2007--2007}{Marie-Curie Fellow}{Huber Group, European Institute of Bioinformatics}{}{Cambridge, UK}{}
 \cventry{2006--2008}{M.Sc. Bioinformatics}{Universit\"at Heidelberg}{Germany}{}{}
 \cventry{2002--2006}{B.Sc. Biology, hon.}{Peking University}{Beijing, China}{}{}  % arguments 3 to 6 are optional
-% \cventry{1999--2002}{High-school diplom}{Tianjin Nr.1 High School}{Tianjin, China}{}{}  % arguments 3 to 6 are optional
-%% B.Sc.: Mit Auszeichnung, Ranking top 5\%. Nebenfach: Germanistik, Ranking 1/30
-%\section{Promotion}
-%\cvline{Thema}{\emph{}}
-%\cvline{Betreuer}{PD Dr. Stefan Wiemann, Abteilung Molekulare Genomanalyse, DKFZ}
-%\cvline{Thesis Advisory Commitee}{Dr. Wolfgang Huber, Dr. Rainer K\"onig}
-%\cvline{Kurzbeschreibung}{\small}
+
+\section{Patents}
+
+\cvitem{2020}{Oligonucleotides for modulating RTEL1 expression}
+\cvitem{2018}{Pyrrolo[2,3-b]pyrazine compounds as cccDNA inhibitors for the treatment of Hepatitis B Virus (HBV) infection}
+
+\section{Book chapters}
+
+\cvitem{2016}{Applied Biclustering Methods for Big and High-Dimensional Data Using R, Chapman \& Hall/CRC Biostatistics Series, edited by Adetayo Kasim, S. H., Ziv Shkedy, Sebastian Kaiser \& Talloen, W.}
 
 % Publications from a BibTeX file
+\renewcommand\refname{Publications with (co-)first or correspondence authorship}
+%\bibliographystyle{plainyr-rev}
+%\bibliography{mypubs-first-last,mypubs-not-first-last}       % 'publications' is the name of a BibTeX file
 \nocite{*}
-\renewcommand\refname{Selected peer-reviewed publications}
-\bibliographystyle{plainyr-rev}
-\bibliography{mypubs-selected}       % 'publications' is the name of a BibTeX file
-\cvitem{}{$\to$ See the full, manually curated list at \href{http://goo.gl/CoeJu7}{Google Scholar} (\url{http://goo.gl/CoeJu7}).}
+\printbibliography[keyword=primary]
 
-\section{Selected invited talks}
-\cvitem{2021}{\textit{Optimization of the TeraTox assay for preclinical teratogenicity assessment}, co-presentation with Manuela Jaklin, OpenTox Virtual Conference, 2021}
-\cvitem{2019}{\textit{Bioinformatics and exploratory data analysis in drug discovery: an industrial perspective}, ISMB/ECCB, 2019, Basel, Switzerland}
-\cvitem{2018}{\textit{Mathematics in drug discovery: a practitioner’s view}, Perlen-Kolloquium, University of Basel, Basel, Switzerland}
+\renewcommand\refname{Other peer-reviewed publications}
+\nocite{*}
+\printbibliography[keyword=secondary]
+
+%\renewcommand\refname{Conference posters and papers}
+%\nocite{*}
+%\printbibliography[keyword=posters]
+
+\section{Preprints (not peer-reviewed)}
+
+\cvitem{2023}{Courzet, S. et al. G-PLIP: Knowledge graph neural network for structure-free protein-ligand affinity prediction}
+\cvitem{2023}{Valeanu, A. et al. Kinex infers causal kinases from phosphoproteomics data}
+\cvitem{2023}{Rot, G. et al. splicekit: a comprehensive toolkit for splicing analysis from short-read RNA-seq}
+\cvitem{2022}{Geser, P. and Zhang, J. D. Gene symbol recognition with GeneOCR}
+\cvitem{2021}{Zhang, Y. et al. A Novel, Anatomy-Similar in Vitro Model of 3D Airway Epithelial for Anti-Coronavirus Drug Discovery}
+\cvitem{2019}{Fang, T. et al. Gene-set enrichment with regularized regression}
 
 \section{Selected open-source software}
-\cvitem{BESCA}{Single-cell omics data analysis pipeline, built together with BEDA colleagues.}
-\cvitem{BioQC}{Detecting tissue heterogeneity in high-throughput expression
-data.}
-\cvitem{KEGGgraph}{Data mining and network analysis
-  of biological pathways as graphs in R and Bioconductor.}
+\cvitem{BESCA}{Single-cell omics data analysis pipeline, built together with BEDA colleagues}
+\cvitem{BioQC}{Detecting tissue heterogeneity in high-throughput expression data}
+\cvitem{ddCt}{A pipeline to collect, analyse and visualize qRT-PCR results}
+\cvitem{HBVouroboros}{A Snakemake-based workflow for hepatitis B virus (HBV) drug discovery}
+\cvitem{KEGGgraph}{Data mining and network analysis of biological pathways as graphs}
+\cvitem{Kinex}{Inference of causal serine/threonine kinases from phosphoproteomics data}
+\cvitem{ribios}{A collection of R packages for computational biology tasks in drug discovery}
+\cvitem{RTCA}{Analysis and visualization of data from Roche(R) xCELLigence RTCA systems}
+
+\section{Selected invited talks}
+\cvitem{2023}{\textit{Finding hope in a hopeless time - How Predictive Modeling and Data Analytics shifts our perspectives about antimicrobial discovery}, Workshop on the promise of artificial intelligence to antibacterial drug discovery, 7th AMR Conference, Basel, Switzerland}
+\cvitem{2022}{\textit{Towards causal modelling of drug-induced toxicity for preclinical to clinical translation}, the Third In Silico Toxicology meeting, online}
+\cvitem{2021}{\textit{Optimization of the TeraTox assay for preclinical teratogenicity assessment}, co-presentation with Manuela Jaklin, OpenTox Virtual Conference, online}
+\cvitem{2019}{\textit{Bioinformatics and exploratory data analysis in drug discovery: an industrial perspective}, ISMB/ECCB, Basel, Switzerland}
+\cvitem{2018}{\textit{Mathematics in drug discovery: a practitioner’s view}, Perlen-Kolloquium, University of Basel, Switzerland}
+
+\section{Teaching}
+
+\cvitem{2020--\hspace{4.25ex}}{Courses on causal inference and computational toxicology for the PSI (Statisticians in the Pharmaceutical Industry) community, once a year}
+\cvitem{2018--\hspace{4.25ex}}{Lecture series~\textit{\href{http://MCBDD.ch}{Mathematical and Computational Biology in Drug Discovery}} at the University of Basel, 2 hours per week in the spring semester}
+\cvitem{2018--\hspace{4.25ex}}{Lecture series~\textit{\href{http://AMIDD.ch}{Introduction to Applied Mathematics and Informatics In Drug Discovery}} at the University of Basel, 2 hours per week in the fall semester}
+\cvitem{2018--\hspace{4.25ex}}{Lecture series~\textit{From Novel Targets To Novel Therapeutic Modalities}, Master Programme Drug Sciences, University of Basel, one lecture per semester}
+\cvitem{2012--\hspace{4.25ex}}{Leading company-internal courses, seminars and workshops about computational biology in drug discovery, on average 2 hours per week}
+
+\section{Engagement in academic and vocational-training activities}
+
+\cvitem{2023--\hspace{4.25ex}}{Invited member of selection committees for tenure track positions in universities}
+\cvitem{2022--\hspace{4.25ex}}{Co-organizer of Roche PMDA (Predictive Modeling and Data Analytics) Summer Schools for PhD students, a one-week event taking place annually}
+\cvitem{2021--\hspace{4.25ex}}{Certified vocational trainer (German: \textit{Lehrmeister}) and exam expert for vocational apprenticeship in computer sciences}
+\cvitem{2020--\hspace{4.25ex}}{Certified Software and Data Carpentry instructor, hosting company internal courses on programming and data analysis}
+\cvitem{2014--\hspace{4.25ex}}{Invited reviewer for research proposals by national funding agencies}
+\cvitem{2012--\hspace{4.25ex}}{Reviewer of scientific manuscripts for journals including \emph{Bioinformatics}, \emph{PLOS Comp. Biol.}, \emph{NAR Genom. and Bioinform.}, \textit{etc.}}
+
+
+\section{Establishing and leading a research group}
+
+\cvitem{2022--\hspace{4.25ex}}{I co-founded and lead a new research group with six permanent positions, two postdocs, and interns. The team consists of computational scientists with training or working experience in toxicology, chemistry, biology, and statistics. We perform applied research on computational safety and toxicology to inform decisions in drug discovery and development. I led the interviews and the on-boarding of new employees. I am responsible of integrating the team in the working environment and in the process of developing new drugs, as well as defining the team's vision, strategy, and scientific focus.}
 
 \section{Supervised postdocs}
 
-\cvitem{Davide Bassani}{2023- (co-supervision with Dr. Neil Parrott and Dr. Nenad Manevski), computational approaches to preclinical pharmacokinetic property prediction}
-\cvitem{Milad Adibi}{2020-2022 (co-supervision with Dr. Ekaterina Breous-Nystrom), multiscale modeling of drug-induced liver toxicity, currently senior computational biologist at University of Zurich}
-\cvitem{Simon Gutbier}{2018-2020 (co-supervision with Dr. Christoph Patsch and Dr. Markus Britschgi), immune pathway characterization with tool-compound screening for Parkinson's Disease, currently principal scientist at Roche}
+\cvitem{Dr. Davide Bassani}{2023- (co-supervision with Dr. Neil Parrott and Dr. Nenad Manevski), computational approaches to preclinical pharmacokinetic property prediction}
+\cvitem{Dr. Milad Adibi}{2020-2022 (co-supervision with Dr. Ekaterina Breous-Nystrom), multiscale modeling of drug-induced liver toxicity, currently senior computational biologist at University of Zurich}
+\cvitem{Dr. Simon Gutbier}{2018-2020 (co-supervision with Dr. Christoph Patsch and Dr. Markus Britschgi), immune pathway characterization with tool-compound screening for Parkinson's Disease, currently principal scientist at Roche}
 
-\section{Supervised master and PhD students}
-\cvitem{Alexandra Valeanu}{2023, internship on inferring causal kinases with phosphoproteomics data}
-\cvitem{Simon Crouzet}{2022, internship on predicting protein-ligand interaction with graph neural networks, currently PhD student in Dal Peraro's group at EPFL}
+\section{Supervised master students and interns}
+
+\cvitem{Alexandra Valeanu}{2023, internship working on inferring causal kinases with phosphoproteomics data}
+\cvitem{Simon Crouzet}{2022, internship working on predicting protein-ligand interaction with graph neural networks, currently PhD student in Dal Peraro's group at EPFL}
 \cvitem{Anja Lieberherr}{2022-2023 (co-supervision with Prof. Niko Beerenwinkel), master thesis on applying graph neural networks in drug discovery, currently junior technology consultant at BearingPoint, Zürich}
-\cvitem{Sarah Leonardo Morillo}{2021-2022, internship on proteomics data and protein-half life, currently PhD student in Erik van Nimwegen's group at Biozentrum, University of Basel}
+\cvitem{Sarah Morillo}{2021-2022, internship working on proteomics data and protein-half life, currently PhD student in Erik van Nimwegen's group at Biozentrum, University of Basel}
 \cvitem{Andreea Ciuprina}{2020 (co-supervision with Prof. Niko Beerenwinkel), internship and master thesis on computational inference of immune-cell contribution to drug-induced liver toxicity, currently data engineer and scientist at Endress+Hauser Flowtec}
 \cvitem{Rudolf Biczok}{2018-2019 (co-supervision with Prof. Alexandros Stamatakis), internship and master thesis on building a gene-expression database and evaluating gene-set comparison metrics, currently full-stack Java architect and Azure cloud specialist at Bank for International Settlements (BIS)}
-\cvitem{Moaraj Hasan}{2017-2018, internship on automating gene-expression data analysis}
+\cvitem{Moaraj Hasan}{2017-2018, internship working on automating gene-expression data analysis}
 \cvitem{Tao Fang}{2017-2018 (co-supervision with Prof. Mark Robinson), internship and master thesis on histopathology prediction with deep neural networks, currently postdoctoral fellow in von Mering group at University of Zurich}
-\cvitem{Gregor Sturm}{2016-2017, master intern working on gene signatures and the BioQC software, currently Scientist Clinical Bioinformatics, Boehringer Ingelheim}
+\cvitem{Gregor Sturm}{2016-2017, internship working on gene signatures and the BioQC software, currently Scientist Clinical Bioinformatics, Boehringer Ingelheim}
 
 \section{Trained vocational apprentices in computer sciences}
+
+\cvitem{Giulia Ferraina}{2023-2024, currently co-developing a software system for drug discovery research}
+\cvitem{Jannick Lippuner}{2023-2024, currently co-developing a software system for drug discovery research}
 \cvitem{Yannik Benndorf}{2022-2023, currently bachelor of computer sciences in TU München}
 \cvitem{Paul Geser}{2022-2023, currently local IT manager volunteer at MAF Madagascar}
 \cvitem{Leonardo Seminatore}{2021-2022, currently bachelor of science in geomatics, FHNW}
@@ -196,13 +228,7 @@ data.}
 %\cvlistitem{Cell-based screening to identify regulators of human microRNA miR-21 (Kooperation mit Dr. Ulrich Tschulena)}
 %\cvlistitem{New cell-based screening with multi-demensional output to identify novel regulators of ERBB signaling system (Kooperation mit Dr. \"Ozg\"ur Sahin)}
 
-
-
 \vspace*{-1em}
-\section{Personal information}
-\cvitem{Date of Birth}{Sept. 28$^{th}$, 1983 in Tianjin, China}
-\cvitem{Marital status}{Married, father of two daughters}
-\cvitem{Languages}{English, German, Chinese}
 \end{document}
 
 %\renewcommand{\listitemsymbol}{-} % change the symbol for lists
