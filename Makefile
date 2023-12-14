@@ -1,4 +1,10 @@
-all: en de
+all: en de long
+
+long: JitaoDavidZhang_CV_long.tex
+	pdflatex JitaoDavidZhang_CV_long.tex
+	biber JitaoDavidZhang_CV_long
+	pdflatex JitaoDavidZhang_CV_long.tex
+	pdflatex JitaoDavidZhang_CV_long.tex
 
 en: JitaoDavidZhang_CV.tex
 	pdflatex JitaoDavidZhang_CV.tex
