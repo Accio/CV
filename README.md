@@ -1,7 +1,7 @@
 *Curriculum Vitae* of Jitao David Zhang
 ===
 
-My CV in PDF and the source code to generate it.
+My [CV](./JitaoDavidZhang_CV.pdf) in PDF and the source code to generate it.
 
 The CV was rendered with the *modern cv* template made by Xavier Danaux (xdanaux@gmail.com).
 
