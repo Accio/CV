@@ -1,10 +1,10 @@
 all: long
 
-long: JitaoDavidZhang_CV_long.tex
-	pdflatex JitaoDavidZhang_CV_long.tex
-	biber JitaoDavidZhang_CV_long
-	pdflatex JitaoDavidZhang_CV_long.tex
-	pdflatex JitaoDavidZhang_CV_long.tex
+long: JitaoDavidZhang_CV.tex
+	pdflatex JitaoDavidZhang_CV.tex
+	biber JitaoDavidZhang_CV
+	pdflatex JitaoDavidZhang_CV.tex
+	pdflatex JitaoDavidZhang_CV.tex
 
 clean:
 	rm -f *~ *.swp *.aux *.bbl *.blg *.log *.out *.xml *.bcf
