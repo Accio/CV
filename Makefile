@@ -10,6 +10,6 @@ clean:
 	rm -f *~ *.swp *.aux *.bbl *.blg *.log *.out *.xml *.bcf
 
 setup:
-	sudo apt-get install texlive texlive-latex-extra texlive-bibtex-extra texlive-fonts-extra biber
+	sudo apt-get install texlive texlive-latex-extra texlive-bibtex-extra texlive-fonts-extra biber xpdf
 
 .PHONY: clean
