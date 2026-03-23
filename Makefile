@@ -11,5 +11,6 @@ clean:
 
 setup:
 	sudo apt-get install texlive texlive-latex-extra texlive-bibtex-extra texlive-fonts-extra biber xpdf
+	git config core.hooksPath .githooks
 
 .PHONY: clean

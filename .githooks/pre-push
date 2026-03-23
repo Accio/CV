@@ -1,0 +1,11 @@
+#!/bin/bash
+# Pre-push hook: run make to verify PDF builds successfully
+
+echo "Running 'make' to verify PDF generation..."
+make
+if [ $? -ne 0 ]; then
+    echo "ERROR: PDF generation failed. Push aborted."
+    exit 1
+fi
+
+echo "PDF generation successful. Proceeding with push."
