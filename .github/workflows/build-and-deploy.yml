@@ -1,0 +1,63 @@
+name: Build CV and Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [master]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install LaTeX dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive texlive-latex-extra texlive-bibtex-extra texlive-fonts-extra biber
+
+      - name: Build PDF
+        run: make
+
+      - name: Prepare Pages site
+        run: |
+          mkdir -p _site
+          cp JitaoDavidZhang_CV.pdf _site/
+          cat > _site/index.html << 'HTMLEOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>CV - Jitao David Zhang</title>
+            <style>
+              * { margin: 0; padding: 0; box-sizing: border-box; }
+              body { width: 100vw; height: 100vh; overflow: hidden; }
+              embed { width: 100%; height: 100%; }
+            </style>
+          </head>
+          <body>
+            <embed src="JitaoDavidZhang_CV.pdf" type="application/pdf">
+          </body>
+          </html>
+          HTMLEOF
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

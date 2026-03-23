@@ -6,6 +6,6 @@
 *.bst
 *.log
 *.out
-*.bib
 *.xml
 *.bcf
+*.pdf
